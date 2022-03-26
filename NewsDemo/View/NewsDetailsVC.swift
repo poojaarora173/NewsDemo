@@ -45,9 +45,16 @@ class NewsDetailsVC: UIViewController {
         if let newsImage = newsData?.urlToImage{
             imageViewNews.setSDImage(newsImage)
         }
+        // Add gesture on label
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.webViewTap(_:)))
+        lblWebLink.isUserInteractionEnabled = true
+        lblWebLink.addGestureRecognizer(labelTap)
         
-       
     }
-    
+    @objc func webViewTap(_ sender: UITapGestureRecognizer) {
+        let vc = WebViewController.initFromStoryboard()
+        vc.url = newsData.url
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
