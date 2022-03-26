@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57DB3DE627EF823A00B0E346 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3DE527EF823A00B0E346 /* NewsCell.swift */; };
+		57DB3DE827EF83F800B0E346 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3DE727EF83F800B0E346 /* NewsViewModel.swift */; };
+		57DB3DEA27EF841F00B0E346 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3DE927EF841F00B0E346 /* NewsModel.swift */; };
 		848A3B412762148200D2026C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A3B402762148200D2026C /* AppDelegate.swift */; };
 		848A3B432762148200D2026C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A3B422762148200D2026C /* SceneDelegate.swift */; };
 		848A3B452762148200D2026C /* NewsListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A3B442762148200D2026C /* NewsListingVC.swift */; };
@@ -28,6 +31,9 @@
 		3E6E5DCB3D96DADAF5A50A00 /* Pods-Hope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hope.release.xcconfig"; path = "Target Support Files/Pods-Hope/Pods-Hope.release.xcconfig"; sourceTree = "<group>"; };
 		4808B9517354D558BD7F7B45 /* Pods-NewsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsDemo.debug.xcconfig"; path = "Target Support Files/Pods-NewsDemo/Pods-NewsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		518DB96F623F7078828ED871 /* Pods-CommonSetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonSetup.release.xcconfig"; path = "Target Support Files/Pods-CommonSetup/Pods-CommonSetup.release.xcconfig"; sourceTree = "<group>"; };
+		57DB3DE527EF823A00B0E346 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		57DB3DE727EF83F800B0E346 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		57DB3DE927EF841F00B0E346 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		848A3B3D2762148200D2026C /* NewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848A3B402762148200D2026C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		848A3B422762148200D2026C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 		848A3B6B2762226C00D2026C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				57DB3DE727EF83F800B0E346 /* NewsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 		848A3B6C2762227300D2026C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				57DB3DE927EF841F00B0E346 /* NewsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +169,7 @@
 		848A3B6D2762227A00D2026C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				57DB3DE527EF823A00B0E346 /* NewsCell.swift */,
 				848A3B442762148200D2026C /* NewsListingVC.swift */,
 			);
 			path = View;
@@ -309,6 +318,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DB3DEA27EF841F00B0E346 /* NewsModel.swift in Sources */,
+				57DB3DE627EF823A00B0E346 /* NewsCell.swift in Sources */,
 				848A3B452762148200D2026C /* NewsListingVC.swift in Sources */,
 				848A3B6427621C4C00D2026C /* Extensions.swift in Sources */,
 				848A3B5F276219C500D2026C /* Webservice.swift in Sources */,
@@ -318,6 +329,7 @@
 				848A3B432762148200D2026C /* SceneDelegate.swift in Sources */,
 				848A3B7527622C9400D2026C /* AppFont.swift in Sources */,
 				848A3B5D276219C500D2026C /* APIRequest.swift in Sources */,
+				57DB3DE827EF83F800B0E346 /* NewsViewModel.swift in Sources */,
 				848A3B5C276219C500D2026C /* APIClient.swift in Sources */,
 				848A3B6227621ADC00D2026C /* Constants.swift in Sources */,
 			);

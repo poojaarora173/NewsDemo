@@ -28,6 +28,34 @@ class CommonUtility {
             
         }
     }
+    func formattedDateFromString(dateString: String) -> String? {
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        if let date = inputFormatter.date(from: dateString) {
+            
+            let daySuffix: String
+            let day = Calendar.current.component(.day, from: date)
+            
+            switch day {
+            case 11...13: daySuffix =  "th"
+            default:
+                switch day % 10 {
+                case 1: daySuffix =  "st"
+                case 2: daySuffix =  "nd"
+                case 3: daySuffix =  "rd"
+                default: daySuffix =  "th"
+                }
+            }
+            
+            
+            let desiredFormat = "dd'\(daySuffix)' MMM, yyyy hh:mm a"
+            let outputFormatter = DateFormatter()
+            outputFormatter.dateFormat = desiredFormat
+            return outputFormatter.string(from: date)
+            
+        }
+        return ""
+    }
 }
 
 extension UIViewController {

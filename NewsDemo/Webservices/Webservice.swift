@@ -26,7 +26,7 @@ enum Webservice {
         var method: HTTPMethod {
             switch self {
             case .getNewsList :
-                return .post
+                return .get
             }
         }
         
