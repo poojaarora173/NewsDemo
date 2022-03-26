@@ -64,6 +64,10 @@ extension NewsListingVC: UITableViewDelegate, UITableViewDataSource{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let model = NewsViewModel.instance.aryNewsModel[indexPath.row]
+        let detailVc = NewsDetailsVC.initFromStoryboard()
+        detailVc.newsData = model
+        self.navigationController?.pushViewController(detailVc, animated: true)
     }
 }
 //MARK:- Web service Methods
