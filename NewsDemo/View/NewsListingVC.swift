@@ -24,6 +24,7 @@ class NewsListingVC: UIViewController {
         getNewsList()
        
     }
+    
 }
 //MARK:- Table View Delagate Methods
 extension NewsListingVC: UITableViewDelegate, UITableViewDataSource{
@@ -52,10 +53,22 @@ extension NewsListingVC: UITableViewDelegate, UITableViewDataSource{
             newsCell.lblWebLink.isUserInteractionEnabled = true
             newsCell.lblWebLink.addGestureRecognizer(labelTap)
             
+            let imageTap = UITapGestureRecognizer(target: self, action: #selector(self.moveToImageViewer(_:)))
+            newsCell.imageViewNews.tag = indexPath.row
+            newsCell.imageViewNews.isUserInteractionEnabled = true
+            newsCell.imageViewNews.addGestureRecognizer(imageTap)
+            
             newsCell.imageViewNews.setSDImage(model.urlToImage)
             cell = newsCell
         }
         return cell
+    }
+    //MARK: Custom Methods
+    @objc func moveToImageViewer(_ sender: UITapGestureRecognizer){
+        let model = NewsViewModel.instance.aryNewsModel[sender.view!.tag]
+        let vc = ImageViewerVC.initFromStoryboard()
+        vc.imageURL = model.urlToImage
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc func webViewTap(_ sender: UITapGestureRecognizer) {
         let model = NewsViewModel.instance.aryNewsModel[sender.view!.tag]
@@ -80,4 +93,3 @@ extension NewsListingVC{
         }
     }
 }
-
