@@ -40,9 +40,10 @@ extension NewsListingVC: UITableViewDelegate, UITableViewDataSource{
             newsCell.lblTitle.text = model.title
             let dateStr =  CommonUtility.sharedInstance.formattedDateFromString(dateString: model.publishedAt)
             newsCell.lblDate.text = dateStr
-            newsCell.lblAuthor.text = "Written By:   " + model.author
+            newsCell.lblAuthor.attributedText = model.author.htmlToAttributedString
             newsCell.lblDate.adjustsFontSizeToFitWidth = true
             newsCell.lblWebLink.adjustsFontSizeToFitWidth = true
+            newsCell.lblWebLink.tag = indexPath.row
             newsCell.lblWebLink.attributedText = NSAttributedString(string: model.url, attributes:
                                                                         [.underlineStyle: NSUnderlineStyle.single.rawValue])
             
@@ -57,9 +58,11 @@ extension NewsListingVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     @objc func webViewTap(_ sender: UITapGestureRecognizer) {
-        
+        let model = NewsViewModel.instance.aryNewsModel[sender.view!.tag]
+        let vc = WebViewController.initFromStoryboard()
+        vc.url = model.url
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
