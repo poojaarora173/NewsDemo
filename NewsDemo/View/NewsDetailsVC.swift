@@ -53,7 +53,7 @@ class NewsDetailsVC: UIViewController {
     }
     @objc func webViewTap(_ sender: UITapGestureRecognizer) {
         let vc = WebViewController.initFromStoryboard()
-        vc.url = newsData.url
+        vc.url = newsData!.url
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
