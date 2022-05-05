@@ -11,6 +11,8 @@ class NewsListingVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+  
+    
     // MARK: - ======== Init ========
     static func initFromStoryboard() -> NewsListingVC {
         let controller = CommonUtility.mainStoryboard.instantiateViewController(withIdentifier: "NewsListingVC") as! NewsListingVC

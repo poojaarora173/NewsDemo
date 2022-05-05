@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		576C0F7727F07A6700350A68 /* NewsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 576C0F7527F07A6700350A68 /* NewsModel.xcdatamodeld */; };
 		57DB3DE627EF823A00B0E346 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3DE527EF823A00B0E346 /* NewsCell.swift */; };
 		57DB3DE827EF83F800B0E346 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3DE727EF83F800B0E346 /* NewsViewModel.swift */; };
 		57DB3DEA27EF841F00B0E346 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3DE927EF841F00B0E346 /* NewsModel.swift */; };
@@ -34,6 +35,7 @@
 		3E6E5DCB3D96DADAF5A50A00 /* Pods-Hope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hope.release.xcconfig"; path = "Target Support Files/Pods-Hope/Pods-Hope.release.xcconfig"; sourceTree = "<group>"; };
 		4808B9517354D558BD7F7B45 /* Pods-NewsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsDemo.debug.xcconfig"; path = "Target Support Files/Pods-NewsDemo/Pods-NewsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		518DB96F623F7078828ED871 /* Pods-CommonSetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonSetup.release.xcconfig"; path = "Target Support Files/Pods-CommonSetup/Pods-CommonSetup.release.xcconfig"; sourceTree = "<group>"; };
+		576C0F7627F07A6700350A68 /* NewsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsModel.xcdatamodel; sourceTree = "<group>"; };
 		57DB3DE527EF823A00B0E346 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		57DB3DE727EF83F800B0E346 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		57DB3DE927EF841F00B0E346 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				848A3B562762186E00D2026C /* Supporting File */,
 				848A3B552762185E00D2026C /* Storyboard */,
 				848A3B542762184F00D2026C /* Delegate */,
+				576C0F7527F07A6700350A68 /* NewsModel.xcdatamodeld */,
 			);
 			path = NewsDemo;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				57DB3DE627EF823A00B0E346 /* NewsCell.swift in Sources */,
 				57DB3DEC27EF99F000B0E346 /* WebViewVC.swift in Sources */,
 				848A3B452762148200D2026C /* NewsListingVC.swift in Sources */,
+				576C0F7727F07A6700350A68 /* NewsModel.xcdatamodeld in Sources */,
 				848A3B6427621C4C00D2026C /* Extensions.swift in Sources */,
 				848A3B5F276219C500D2026C /* Webservice.swift in Sources */,
 				848A3B6A27621DEE00D2026C /* CommonUtility.swift in Sources */,
@@ -547,6 +551,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		576C0F7527F07A6700350A68 /* NewsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				576C0F7627F07A6700350A68 /* NewsModel.xcdatamodel */,
+			);
+			currentVersion = 576C0F7627F07A6700350A68 /* NewsModel.xcdatamodel */;
+			path = NewsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 848A3B352762148200D2026C /* Project object */;
 }

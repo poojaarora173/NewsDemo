@@ -28,6 +28,9 @@ class NewsDetailsVC: UIViewController {
     //MARK:- View Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       NewsViewModel.instance.fetch()
+        
         initialSetup()
     }
     
